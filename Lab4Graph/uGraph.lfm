@@ -1,0 +1,127 @@
+object frmGraph: TfrmGraph
+  Left = 300
+  Height = 480
+  Top = 150
+  Width = 760
+  Caption = 'График функции'
+  ClientHeight = 480
+  ClientWidth = 760
+  Position = poScreenCenter
+  LCLVersion = '2.2.0.0'
+  object lblTitle: TLabel
+    Left = 16
+    Height = 30
+    Top = 10
+    Width = 560
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = False
+    Caption = 'График функции sin(x)'
+    Font.Height = -21
+    ParentColor = False
+    ParentFont = False
+  end
+  object pbGraph: TPaintBox
+    Left = 16
+    Height = 410
+    Top = 52
+    Width = 560
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    OnPaint = pbGraphPaint
+  end
+  object btnDraw: TButton
+    Left = 600
+    Height = 32
+    Top = 52
+    Width = 144
+    Anchors = [akTop, akRight]
+    Caption = 'Рисовать'
+    OnClick = btnDrawClick
+    TabOrder = 0
+  end
+  object lblXMin: TLabel
+    Left = 600
+    Height = 15
+    Top = 108
+    Width = 144
+    Anchors = [akTop, akRight]
+    Caption = 'X минимальное'
+    ParentColor = False
+  end
+  object edXMin: TEdit
+    Left = 600
+    Height = 23
+    Top = 128
+    Width = 144
+    Anchors = [akTop, akRight]
+    TabOrder = 1
+    Text = '-3,14'
+  end
+  object lblXMax: TLabel
+    Left = 600
+    Height = 15
+    Top = 168
+    Width = 144
+    Anchors = [akTop, akRight]
+    Caption = 'X максимальное'
+    ParentColor = False
+  end
+  object edXMax: TEdit
+    Left = 600
+    Height = 23
+    Top = 188
+    Width = 144
+    Anchors = [akTop, akRight]
+    TabOrder = 2
+    Text = '3,14'
+  end
+  object lblN: TLabel
+    Left = 600
+    Height = 15
+    Top = 228
+    Width = 144
+    Anchors = [akTop, akRight]
+    Caption = 'Количество точек'
+    ParentColor = False
+  end
+  object cbN: TComboBox
+    Left = 600
+    Height = 23
+    Top = 248
+    Width = 144
+    Anchors = [akTop, akRight]
+    ItemHeight = 15
+    Items.Strings = (
+      '5'
+      '9'
+      '17'
+      '33'
+      '65'
+      '129'
+    )
+    ItemIndex = 3
+    Style = csDropDownList
+    TabOrder = 3
+    Text = '33'
+  end
+  object chkPoints: TCheckBox
+    Left = 600
+    Height = 19
+    Top = 292
+    Width = 144
+    Anchors = [akTop, akRight]
+    Caption = 'Точки (иначе ломаная)'
+    OnClick = chkPointsClick
+    TabOrder = 4
+  end
+  object btnExit: TButton
+    Left = 600
+    Height = 32
+    Top = 430
+    Width = 144
+    Anchors = [akRight, akBottom]
+    Caption = 'Выход'
+    OnClick = btnExitClick
+    TabOrder = 5
+  end
+end
